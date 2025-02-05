@@ -1,0 +1,743 @@
+<!-- RESET CSS - START -->
+<style>
+    /***** Global spaces - START *****/
+    .page-template-builder .block-template-builder .container,
+    .page-template-builder .block-template-builder,
+    .tw-px-6,
+    .page-template-builder {
+        padding: 0;
+    }
+
+    .page-template-builder .section-template-builder, 
+    .page-template-builder .block-template-builder,
+    .tw-container,
+    .tw-my-4 {
+        margin: 0;
+    }
+
+    .tw-container {
+        max-width: 1480px;
+    }
+    /***** Global spaces - END *****/
+
+    /***** Breadcrumb - START *****/
+    .builder-header:not(#builderHeader) {
+        display: none;
+    }
+
+    .block.block-breadcrumb {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    @media (min-width: 768px) {
+        .block.block-breadcrumb {
+            margin: 8px 40px;
+        }
+
+        .block.block-breadcrumb .container {
+            padding: 0;
+        }
+    }
+    
+    .block-breadcrumb ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        white-space: normal;
+    }
+    
+    .block-breadcrumb .breadcrumb li:first-child {
+        display: block;
+    }
+
+    .block-breadcrumb .breadcrumb li:not(:first-child) {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        column-gap: 8px;
+    }
+
+    .block-breadcrumb li:before {
+        position: unset;
+        left: unset;
+        bottom: unset;
+    }
+    
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+    /***** Breadcrumb - END *****/
+</style>
+<!-- RESET CSS - END -->
+
+<!-- GLOBAL STYLES - START -->
+<style>
+    /****** Main - START *****/
+    .lpMain--coop {
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        row-gap: 56px;
+        padding: 56px 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain--coop {
+            padding: 56px 40px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+
+    /*** <p></p> ***/
+    p.lpText {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        p.lpText {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+    /****** Main - END *****/
+
+
+    /***** Titles - START *****/
+
+    /*** <h1></h1> ***/
+    .lpTitle__h1 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+    .lpTitle__h2 {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h2 {
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+        }
+    }
+    
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+    .lpTitle__h2span {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+    }
+    
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+    
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+    
+    .lpTitle__h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h3 {
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+    }
+    /***** Titles - END *****/
+
+    /****** Images - START *****/
+    .lpImage--mobile {
+        display: block;
+    }
+
+    .lpImage--desktop {
+        display: none;
+    }
+    
+    @media (min-width: 768px) {
+        .lpImage--mobile {
+            display: none;
+        }
+
+        .lpImage--desktop {
+            display: block;
+        }
+    }
+    /****** Images - END *****/
+
+    /***** CTAS - START *****/
+    
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+    .lpCTA {
+        display: block;
+        width: fit-content;
+        min-width: 200px;
+        padding: 16px 26px;
+        text-align: center;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: .75rem;
+        border-radius: 26px;
+        transition: all .3s ease-out; 
+    }
+    
+    @media (min-width: 768px) {
+        .lpCTA {
+            font-size: 1rem;
+            line-height: .875rem;
+        }
+    }
+    
+    .lpCTA--primary {
+        background-color: #e74e12;
+        color: #FFFFFF;
+    }
+    
+    .lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+    
+    .lpCTA--secondary {
+        background-color: #000000;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+    }
+    
+    .lpCTA--secondary:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+    /***** CTAS - END *****/
+
+    /***** Lists *****/
+    
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+    
+    .lpList {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+    
+    @media (min-width: 768px) {
+        .lpList {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+    
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+    .lpList__item {
+        position: relative;
+        padding-left: 24px;
+    }
+    
+    .lpList__item::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute; 
+        left: 8px;
+        top: 8px;
+    }
+    
+    /***** Links *****/
+    
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+    .lpLink {
+        width: fit-content;
+        color: #333333;
+        text-decoration: underline;
+        font-size: .875rem;
+        line-height: 1.125rem;
+        font-weight: 700;
+        transition: all .3s ease-out;
+    }
+    
+    @media (min-width: 768px) {
+        .lpLink {
+            font-size: 1rem;
+            line-height: 1.125rem;
+            width: 100%;
+        }
+    
+        .lpLink:hover {
+            text-decoration-thickness: 15% !important;
+        }
+    }
+</style>
+<!-- GLOBAL STYLES - END -->
+
+<!-- SECTIONS STYLES - START -->
+<style>
+    /****** Section Header - START *****/
+    .coopSection--header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .coopSection--header .tag {
+        padding: 4px 8px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: #FFFFFF; 
+        font-size: .875rem;
+        line-height: 1.125rem;
+    }
+
+    @media (min-width: 768px) {
+        .coopSection--header .tag {
+            padding: 6px 8px;
+            font-size: 1rem;
+        }
+    }
+    /****** Section Header - END *****/
+
+    /****** Section Text - START *****/
+    .coopSection--text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 56px;
+    }
+
+    .coopArticle--text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+    /****** Section Text - END *****/
+
+    /****** Section Text + Image / Image + Text - START *****/
+    .coopSection--text_image,
+    .coopSection--image_text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+    }
+
+    .coopSection--image_text {
+        flex-direction: column-reverse;
+    }
+
+    .coopSection--text_image .lpImage,
+    .coopSection--image_text .lpImage {
+        width: 120px !important;
+    }
+
+    @media (min-width: 768px) {
+        .coopSection--text_image,
+        .coopSection--image_text {
+            flex-direction: row;
+            column-gap: 32px;
+        }
+
+        .coopSection--text_image .lpImage,
+        .coopSection--image_text .lpImage {
+            width: 220px !important;
+        }
+    }
+    /****** Section Text + Image / Image + Text - END *****/
+
+    /****** Section CTA - START *****/
+    .coopSection--cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /****** Section CTA - END *****/
+
+    /****** Section Text + CTA - START *****/
+    .coopSection--text_cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+        padding: 16px;
+        border-radius: 0 10px 10px 10px;
+        border: 4px solid #000000;
+    }
+
+    .coopSection--text_cta .coopArticle--text {
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .coopSection--text_cta .coopArticle--text {
+            max-width: 620px;
+        }
+    }
+    /****** Section Text + CTA - END *****/
+
+    /****** Section Image Wrapper - START *****/ 
+    .coopSection--imageWrapper .lpImage {
+        width: 100% !important;
+    }
+    /****** Section Image Wrapper - END *****/
+
+    /****** Section 3x Images - START *****/ 
+    .coopSection--3xImages {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        margin: 0 auto;
+    }
+
+    .coopSection--3xImages .coopArticle--desc {
+        padding: 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+
+    .block__3xImages {
+        position: relative;
+        max-width: 300px;
+    }
+
+    @media (min-width: 768px) {
+        .coopSection--3xImages {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .block__3xImages {
+            width: calc(100% / 3 - 16px);
+            max-width: 400px;
+        }
+
+        .coopSection--3xImages .lpImage {
+            max-width: 400px !important;
+        }
+
+        .coopSection--3xImages .coopArticle--desc {
+            padding: 24px;
+        }
+    }
+
+    /*** Section 3x Images + Legend - START ****/
+    .coopSection--3xImages_legend .coopArticle--desc {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .coopSection--3xImages_legend .lpText {
+        color: #FFFFFF;
+    }
+    /*** Section 3x Images + Legend - END ****/
+
+    /****** Section 3x Images - END *****/
+
+    .coopSection--video {
+        display: flex;
+        justify-content: center;
+    }
+
+    .coopSection--video .coopVideo {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .coopSection--video .coopVideo {
+            width: 900px;
+            height: 360px;
+        } 
+    }
+</style>
+<!-- SECTIONS STYLES - END -->
+
+<div class="lpMain lpMain--coop">
+    <!-- Section Header - START -->
+    <section class="lpSection coopSection coopSection--header">
+        <span class="tag">
+            Conseils de mise en œuvre
+        </span>
+        <h1 class="lpTitle__h1">
+            Titre de la page
+        </h1>
+    </section>
+    <!-- Section Header - END -->
+
+    <!-- Section Text - START -->
+    <section class="lpSection coopSection coopSection--text">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Mon espace
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                Rénovation énergétique
+            </span>
+        </h2>
+        <h3 class="lpTitle__h3">
+            Voir tous nos conseils d’experts
+        </h3>
+        <article class="lpArticle coopArticle coopArticle--text">
+            <p class="lpText">
+                En France, le bâtiment est le deuxième secteur le plus émetteur de gaz à effet de serre. Il représente à lui seul 27 % des émissions de CO2 et près de 45 % de la consommation d’énergie finale.
+            </p>
+            <p class="lpText">
+                Face à ce constat, il est temps d’attaquer ensemble le chantier incontournable de la rénovation énergétique. Un chantier immense, qui concerne des millions de particuliers.
+            </p>
+            <ul class="lpList">
+                <p class="lpText">
+                    Pour vous accompagner, nous mobilisons l’ensemble de nos forces :
+                </p>
+                <li class="lpList__item">
+                    des outils pointus (diagnostic de performance énergétique, chiffrage des travaux, logiciel de devis) ;
+                </li>
+                <li class="lpList__item">
+                    une sélection de produits dédiés à la rénovation énergétique, en particulier les produits éligibles aux aides ;
+                </li>
+                <li class="lpList__item">
+                    les conseils de nos 1000 conseillers experts ;
+                </li>
+                <li class="lpList__item">
+                    un accompagnement privilégié pour vous faciliter l’accès à la qualification RGE , et vous permettre ainsi de faire bénéficier vos clients des aides financières.
+                </li>
+            </ul>
+        </article>
+    </section>
+    <!-- Section Text - END -->
+
+    <!-- Section Text + Image - START -->
+    <section class="lpSection coopSection coopSection--text_image">
+        <img src="/s/imgs/pages/coop-2025/template/section_text_image_mobile_120x120.jpg" alt="" class="lpImage lpImage--mobile">
+        <img src="/s/imgs/pages/coop-2025/template/section_text_image_desktop_220x220.jpg" alt="" class="lpImage lpImage--desktop">
+        <article class="lpArticle coopArticle coopArticle--text">
+            <p class="lpText">
+                Lorem ipsum dolor sit amet consectetur. Luctus nisl massa a urna enim. Faucibus elit nunc amet imperdiet vestibulum. Elementum nibh ultricies cras proin nibh. Bibendum scelerisque sed ac quam. Ut risus est mi mauris proin libero sit viverra eget. Mauris nam eu mattis vitae sed in. Consectetur scelerisque eu bibendum non praesent nibh. Viverra id sit malesuada tincidunt. Ac accumsan nulla fusce curabitur egestas. Enim odio donec habitant tincidunt nisi tortor molestie. Curabitur bibendum tempus fringilla facilisi.
+            </p>
+        </article>
+    </section>
+    <!-- Section Text + Image - END -->
+
+    <!-- Section Image + Text - START -->
+    <section class="lpSection coopSection coopSection--image_text">
+        <article class="lpArticle coopArticle coopArticle--text">
+            <p class="lpText">
+                Lorem ipsum dolor sit amet consectetur. Luctus nisl massa a urna enim. Faucibus elit nunc amet imperdiet vestibulum. Elementum nibh ultricies cras proin nibh. Bibendum scelerisque sed ac quam. Ut risus est mi mauris proin libero sit viverra eget. Mauris nam eu mattis vitae sed in. Consectetur scelerisque eu bibendum non praesent nibh. Viverra id sit malesuada tincidunt. Ac accumsan nulla fusce curabitur egestas. Enim odio donec habitant tincidunt nisi tortor molestie. Curabitur bibendum tempus fringilla facilisi.
+            </p>
+        </article>
+        <img src="/s/imgs/pages/coop-2025/template/section_text_image_mobile_120x120.jpg" alt="" class="lpImage lpImage--mobile">
+        <img src="/s/imgs/pages/coop-2025/template/section_text_image_desktop_220x220.jpg" alt="" class="lpImage lpImage--desktop">
+    </section>
+    <!-- Section Image + Text - END -->
+
+    <!-- Section CTA - START -->
+    <section class="lpSection coopSection coopSection--cta">
+        <a href="" class="lpCTA lpCTA--primary">
+            En savoir plus
+        </a>
+    </section>
+    <!-- Section CTA - END -->
+
+    <!-- Section Text + CTA - START -->
+    <section class="lpSection coopSection coopSection--text_cta">
+        <article class="lpArticle coopArticle coopArticle--text">
+            <p class="lpText">
+                Lorem ipsum dolor sit amet consectetur. Diam ipsum dictum vitae faucibus eget phasellus semper amet.
+            </p>
+        </article>
+        <a href="" class="lpCTA lpCTA--primary">
+            En savoir plus
+        </a>
+    </section>
+    <!-- Section CTA - END -->
+
+    <!-- Section Image Wrapper - START -->
+    <section class="lpSection coopSection coopSection--imageWrapper">
+        <img src="/s/imgs/pages/coop-2025/template/section_image_wrapper_mobile_350x156.jpg" alt="" class="lpImage lpImage--mobile">
+        <img src="/s/imgs/pages/coop-2025/template/section_image_wrapper_desktop_1400x285.jpg" alt="" class="lpImage lpImage--desktop">
+    </section>
+    <!-- Section Image Wrapper - END -->
+
+    <!-- Section 3x Images - START -->
+    <section class="lpSection coopSection coopSection--3xImages">
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+        </div>
+    </section>
+    <!-- Section 3x Images - END -->
+
+    <!-- Section 3x Images + Legend - START -->
+    <section class="lpSection coopSection coopSection--3xImages coopSection--3xImages_legend">
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+    </section>
+    <!-- Section 3x Images + Legend - END -->
+
+    <!-- Section 3x Images + Text - START -->
+    <section class="lpSection coopSection coopSection--3xImages coopSection--3xImages_text">
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+            </article>
+        </div>
+    </section>
+    <!-- Section 3x Images + Text - END -->
+
+    <!-- Section 3x Images + Desc - START -->
+    <section class="lpSection coopSection coopSection--3xImages coopSection--3xImages_desc">
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <h3 class="lpTitle__h3">
+                    Lorem ipsum
+                </h3>
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+                <a href="" class="lpCTA lpCTA--secondary">
+                    En savoir plus
+                </a>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <h3 class="lpTitle__h3">
+                    Lorem ipsum
+                </h3>
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+                <a href="" class="lpCTA lpCTA--secondary">
+                    En savoir plus
+                </a>
+            </article>
+        </div>
+        <div class="block__3xImages">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_mobile_300x300.jpg" alt="" class="lpImage lpImage--mobile">
+            <img src="/s/imgs/pages/coop-2025/template/section_3x_images_desktop_400x400.jpg" alt="" class="lpImage lpImage--desktop">
+            <article class="lpArticle coopArticle coopArticle--desc">
+                <h3 class="lpTitle__h3">
+                    Lorem ipsum
+                </h3>
+                <p class="lpText">
+                    Lorem ipsum dolor sit amet consectetur. Aliquet pellentesque eget quis tristique ut.
+                </p>
+                <a href="" class="lpCTA lpCTA--secondary">
+                    En savoir plus
+                </a>
+            </article>
+        </div>
+    </section>
+    <!-- Section 3x Images + Desc - END -->
+
+    <!-- Section Video - START -->
+    <section class="lpSection coopSection coopSection--video">
+        <video id="coopVideo" class="lpVideo coopVideo" alt="" autoplay loop controls>
+            <source src="/s/imgs/pages/coop-2025/template/section_video.mp4" type="video/mp4">
+        </video>
+    </section>
+    <!-- Section Video - END -->
+</div>
