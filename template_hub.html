@@ -1,0 +1,315 @@
+<!-- RESET CSS - START -->
+<style>
+    /***** Global spaces - START *****/
+    .page-template-builder .block-template-builder .container,
+    .page-template-builder .block-template-builder,
+    .tw-px-6,
+    .page-template-builder {
+        padding: 0;
+    }
+
+    .page-template-builder .section-template-builder, 
+    .page-template-builder .block-template-builder,
+    .tw-container,
+    .tw-my-4 {
+        margin: 0;
+    }
+
+    .tw-container {
+        max-width: 1480px;
+    }
+    /***** Global spaces - END *****/
+
+    /***** Breadcrumb - START *****/
+    .builder-header:not(#builderHeader) {
+        display: none;
+    }
+
+    .block.block-breadcrumb {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    @media (min-width: 768px) {
+        .block.block-breadcrumb {
+            margin: 8px 40px;
+        }
+
+        .block.block-breadcrumb .container {
+            padding: 0;
+        }
+    }
+    
+    .block-breadcrumb ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        white-space: normal;
+    }
+    
+    .block-breadcrumb .breadcrumb li:first-child {
+        display: block;
+    }
+
+    .block-breadcrumb .breadcrumb li:not(:first-child) {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        column-gap: 8px;
+    }
+
+    .block-breadcrumb li:before {
+        position: unset;
+        left: unset;
+        bottom: unset;
+    }
+    
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+    /***** Breadcrumb - END *****/
+</style>
+<!-- RESET CSS - END -->
+
+<!-- GLOBAL STYLES - START -->
+<style>
+    /****** Main - START *****/
+    .lpMain--coop {
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        row-gap: 56px;
+        padding: 56px 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain--coop {
+            padding: 56px 40px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+
+    /*** <p></p> ***/
+    p.lpText {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        p.lpText {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+    /****** Main - END *****/
+
+
+    /***** Titles - START *****/
+
+    /*** <h1></h1> ***/
+    .lpTitle__h1 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+    .lpTitle__h2 {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h2 {
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+        }
+    }
+    
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+    .lpTitle__h2span {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+    }
+    
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+    
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+    
+    .lpTitle__h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h3 {
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+    }
+    /***** Titles - END *****/
+
+    /****** Images - START *****/
+    .lpImage--mobile {
+        display: block;
+    }
+
+    .lpImage--desktop {
+        display: none;
+    }
+    
+    @media (min-width: 768px) {
+        .lpImage--mobile {
+            display: none;
+        }
+
+        .lpImage--desktop {
+            display: block;
+        }
+    }
+    /****** Images - END *****/
+
+    /***** CTAS - START *****/
+    
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+    .lpCTA {
+        display: block;
+        width: fit-content;
+        min-width: 200px;
+        padding: 16px 26px;
+        text-align: center;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: .75rem;
+        border-radius: 26px;
+        transition: all .3s ease-out; 
+    }
+    
+    @media (min-width: 768px) {
+        .lpCTA {
+            font-size: 1rem;
+            line-height: .875rem;
+        }
+    }
+    
+    .lpCTA--primary {
+        background-color: #e74e12;
+        color: #FFFFFF;
+    }
+    
+    .lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+    
+    .lpCTA--secondary {
+        background-color: #000000;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+    }
+    
+    .lpCTA--secondary:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+    /***** CTAS - END *****/
+
+    /***** Lists *****/
+    
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+    
+    .lpList {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+    
+    @media (min-width: 768px) {
+        .lpList {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+    
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+    .lpList__item {
+        position: relative;
+        padding-left: 24px;
+    }
+    
+    .lpList__item::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute; 
+        left: 8px;
+        top: 8px;
+    }
+    
+    /***** Links *****/
+    
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+    .lpLink {
+        width: fit-content;
+        color: #333333;
+        text-decoration: underline;
+        font-size: .875rem;
+        line-height: 1.125rem;
+        font-weight: 700;
+        transition: all .3s ease-out;
+    }
+    
+    @media (min-width: 768px) {
+        .lpLink {
+            font-size: 1rem;
+            line-height: 1.125rem;
+            width: 100%;
+        }
+    
+        .lpLink:hover {
+            text-decoration-thickness: 15% !important;
+        }
+    }
+</style>
+<!-- GLOBAL STYLES - END -->
+
+<div class="lpMain lpMain--hubCoop">
+
+</div>
