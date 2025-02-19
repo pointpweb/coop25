@@ -310,6 +310,185 @@
 </style>
 <!-- GLOBAL STYLES - END -->
 
-<div class="lpMain lpMain--hubCoop">
+<!-- SECTIONS STYLES - START -->
+<style>
+    /* INTRO */
+    .lpMain--hubCoop {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hubCoop_intro {
+        position: relative;
+    }
+    .hubCoop_intro img {
+        aspect-ratio: 390 / 330;
+        object-fit: cover;
+        object-position: 0% 0%;
+    }
+    .hubCoop_txt_intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem;
+        background-color: white;
+        width: calc(100% - 32px);
+        max-height: 100%;
+    }
+    .hubCoop_txt_intro .lpTitle__h1 {
+        margin-bottom: 1rem;
+    }
+    /* ARTICLES */
+    .hubCoop_items_grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .grid_single_item {
+        width: 77%;
+        max-width: 300px;
+        border: 1px solid #000000;
+        border-radius: 0 10px 10px 10px;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    .link_single_item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+    .grid_single_item .img_single_item {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 300 / 150;
+        object-fit: cover;
+        border-radius: 0 7px 0 0;
+    }
+    .grid_single_item .lpTitle_item {
+        font-size: 18px;
+        text-transform: initial;
+        padding: 0 8px 0 8px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .grid_single_item .lpText_item {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 0 8px 0 8px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    @media (min-width: 768px) {
+        .hubCoop_items_grid {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        } 
+        .hubCoop_intro img {
+            min-height: 305px;
+            aspect-ratio: unset;
+            object-fit: unset;
+            object-position: unset;
+        }
+        .grid_single_item .img_single_item {
+            aspect-ratio: unset;
+        }
+    }
+    @media (min-width: 1024px) {
+        .hubCoop_txt_intro {
+            width: 40%;
+            min-width: 603px;
+            left: 16px;
+            transform: translate(0px, -50%);
+        }
+        .hubCoop_items_grid {
+            gap: 2rem;
+            max-width: 1264px;
+            margin: 0 auto;
+        }
+        .grid_single_item {
+            width: calc(100% / 3 - 2rem);
+            max-width: unset;
+        }
+        .grid_single_item .lpTitle_item {
+            padding: 0 24px 0 24px;
+        }
+        .grid_single_item .lpText_item {
+            padding: 0 24px 0 24px;
+        }
+    }
+</style>
+<!-- SECTIONS STYLES - END -->
 
+<div class="lpMain lpMain--hubCoop">
+    <div class="hubCoop_intro">
+        <img src="/s/imgs/pages/coop-2025/hub/img_intro_mobile.jpg" alt="" class="lpImage--mobile">
+        <img src="/s/imgs/pages/coop-2025/hub/img_intro_desktop.jpg" alt="" class="lpImage--desktop">
+        <div class="hubCoop_txt_intro">
+            <h1 class="lpTitle__h1">Conseils de mise en œuvre</h1>
+            <p class="lpText">Lorem ipsum dolor sit amet consectetur. Fames at sit cursus ipsum tincidunt feugiat non integer. Ac tellus eget turpis ut condimentum massa feugiat. Tellus hendrerit risus id ultrices dictum fringilla. Netus nibh euismod a risus pellentesque dignissim curabitur. Sagittis praesent interdum mauris viverra id arcu lacus. Urna lorem dui consequat in sodales.</p>
+        </div>
+    </div>
+
+    <div class="hubCoop_items_grid">
+        
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+        <div class="grid_single_item">
+            <a class="link_single_item" href="">
+                <img class="img_single_item" src="/s/imgs/pages/coop-2025/hub/template_vignette.jpg" alt="">
+                <h2 class="lpTitle__h2 lpTitle_item">Lorem ipsum</h2>
+                <p class="lpText lpText_item">Lorem ipsum dolor sit amet consectetur. Euismod nunc quis faucibus erat arcu dapibus ut pellentesque.</p>
+                <button class="lpCTA lpCTA--secondary">En savoir plus</button>
+            </a>
+        </div>
+
+    </div>
 </div>
