@@ -360,6 +360,7 @@
         gap: 1rem;
         text-align: center;
         align-items: center;
+        height: 100%;
     }
     .grid_single_item .img_single_item {
         width: 100%;
@@ -376,13 +377,19 @@
         margin-bottom: 8px;
     }
     .grid_single_item .lpText_item {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 22px;
         padding: 0 8px 0 8px;
         width: 100%;
         margin-bottom: 8px;
     }
+    .grid_single_item .lpCTA  {
+        margin-top: auto;
+    }
     @media (min-width: 768px) {
+        .hubCoop_items_grid {
+            align-items: initial;
+        }
         .hubCoop_items_grid {
             flex-direction: row;
             flex-wrap: wrap;
@@ -399,6 +406,10 @@
         }
     }
     @media (min-width: 1024px) {
+        .grid_single_item .lpText_item {
+            font-size: 16px;
+            line-height: 24px;
+        }
         .hubCoop_txt_intro {
             width: 40%;
             min-width: 603px;
